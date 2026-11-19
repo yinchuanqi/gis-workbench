@@ -40,7 +40,7 @@
     "node": ">=22.5.0"
   },
   "publishConfig": {
-    "registry": "http://172.16.23.90:8081/repository/frontend/",
+    "registry": "https://your-nexus-host/repository/frontend/",
     "access": "public"
   }
 }

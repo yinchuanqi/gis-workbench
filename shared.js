@@ -2,7 +2,7 @@
 export const TOOL_NAME = 'gis_add_layer';
 export const VIEW_TOOL_NAME = 'gis_set_view';
 export const DEFAULT_LAYER_NAME = '天地图影像';
-export const DEFAULT_TILE_URL = '//172.16.23.79/api/gis-map-service/world-map-tiles/images/tiandi-image-3857/{z}/{x}/{y}';
+export const DEFAULT_TILE_URL = '//your-tile-host/api/gis-map-service/world-map-tiles/images/tiandi-image-3857/{z}/{x}/{y}';
 export const DEFAULT_TILE_SIZE = 256;
 export const DEFAULT_ATTRIBUTION = '天地图';
 export const DEFAULT_VIEW_ZOOM = 11;

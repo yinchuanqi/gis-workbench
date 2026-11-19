@@ -10,12 +10,12 @@ A persistent DSH Web plugin (bundle `@yinchuanqi/gis-workbench`) that adds:
 ## Installation in another DSH profile
 
 The package is published to the internal Nexus npm hosted repository
-`http://172.16.23.90:8081/repository/frontend/`.
+`https://your-nexus-host/repository/frontend/`.
 
 Configure the scope once for the target user:
 
 ```bash
-npm config set @yinchuanqi:registry http://172.16.23.90:8081/repository/frontend/
+npm config set @yinchuanqi:registry https://your-nexus-host/repository/frontend/
 dsh plugin --profile web add @yinchuanqi/gis-workbench@0.9.8
 dsh web
 ```
@@ -49,7 +49,7 @@ Mapbox requires setting a real token before creating the map.
 The dependency and bundler were installed from the Nexus npm registry:
 
 ```bash
-npm install --registry=http://172.16.23.90:8081/repository/nexus-npm/ \
+npm install --registry=https://your-nexus-host/repository/nexus-npm/ \
   maplibre-gl@5.24.1 esbuild@0.28.2
 ```
 
@@ -68,7 +68,7 @@ available to esbuild:
 `shared.js` owns the default Tianditu image template:
 
 ```text
-//172.16.23.79/api/gis-map-service/world-map-tiles/images/tiandi-image-3857/{z}/{x}/{y}
+//your-tile-host/api/gis-map-service/world-map-tiles/images/tiandi-image-3857/{z}/{x}/{y}
 ```
 
 Calling `gis_add_layer` with no arguments adds this layer. The Client resolves
