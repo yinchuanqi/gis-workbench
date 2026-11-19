@@ -1,0 +1,46 @@
+{
+  "name": "@yinchuanqi/gis-workbench",
+  "version": "0.9.9",
+  "type": "module",
+  "description": "MapLibre GIS workbench with PostGIS registration, semantic vector styling, GPKG import, COG rasters, and resumable uploads.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "shared.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "src",
+    "server",
+    "style-schema.js",
+    "assets"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-tool"
+      ]
+    }
+  },
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "publishConfig": {
+    "registry": "http://172.16.23.90:8081/repository/frontend/",
+    "access": "public"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "GIS 工作台",
+    "description": "基于 MapLibre GL JS 的 GIS 工作台，初始无图层，通过右侧对话添加天地图影像等栅格图层。"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "GIS workbench",
+    "description": "Adds a MapLibre GL JS workbench with an empty map and conversation-driven raster layers."
+  }
+}
