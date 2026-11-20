@@ -46,14 +46,24 @@ The plugin adds:
 
 ## 在 DSH 配置中安装 / Installation in another DSH profile
 
-The package is published to the internal Nexus npm hosted repository
-`https://your-nexus-host/repository/frontend/`.
+The package is published to the public npm registry:
+`@focus-daima/gis-workbench` (registry `https://registry.npmjs.org`).
 
-包发布在内部 Nexus npm 私有源 `https://your-nexus-host/repository/frontend/`。
+包已发布到公共 npm 源：`@focus-daima/gis-workbench`（索引源
+`https://registry.npmjs.org`）。
 
-Configure the scope once for the target user:
+Install from the public npm registry:
 
-为目标用户一次性配置作用域：
+从公共 npm 源安装：
+
+```bash
+dsh plugin --profile web add @focus-daima/gis-workbench@0.9.10
+dsh web
+```
+
+To use an internal Nexus mirror instead, configure the scope once:
+
+如需改用内部 Nexus 私有源，先一次性配置作用域：
 
 ```bash
 npm config set @focus-daima:registry https://your-nexus-host/repository/frontend/
@@ -70,12 +80,13 @@ npm pack
 dsh plugin --profile web add ./focus-daima-gis-workbench-0.9.10.tgz
 ```
 
-Required runtime: Node.js with `node:sqlite`, GDAL CLI (`ogr2ogr`,
-`gdal_translate`, `gdalinfo`, `gdal2tiles.py`), and Python 3 with GDAL
-bindings. PostGIS registration additionally needs `psycopg`.
+### 兼容版本 / Compatibility
 
-运行时要求：带 `node:sqlite` 的 Node.js、GDAL CLI（`ogr2ogr`、`gdal_translate`、
-`gdalinfo`、`gdal2tiles.py`），以及带 GDAL 绑定的 Python 3；PostGIS 注册还需 `psycopg`。
+- **DSH / Harness**: verified on `0.2.0-rc.2` (web profile) / 已在 DSH `0.2.0-rc.2`（web profile）验证。
+- **Node.js**: `>=22.5.0` (uses `node:sqlite`) / 运行时要求 Node.js `>=22.5.0`（依赖 `node:sqlite`）。
+- **Platform**: Web / 平台 Web。
+- Optional extras: GDAL CLI (`ogr2ogr`, `gdal_translate`, `gdalinfo`, `gdal2tiles.py`) and Python 3 GDAL bindings for vector/raster import; `psycopg` for PostGIS.
+  可选依赖：矢量/栅格导入需 GDAL CLI 与 Python GDAL 绑定；PostGIS 注册还需 `psycopg`。
 
 The default Tianditu tile service is deployment-specific. Replace
 `DEFAULT_TILE_URL` in `shared.js` or configure the tile URL through the API if

@@ -36,7 +36,7 @@
       ]
     }
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "engines": {
     "node": ">=22.5.0"
   },
