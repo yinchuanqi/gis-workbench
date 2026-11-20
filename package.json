@@ -41,7 +41,7 @@
     "node": ">=22.5.0"
   },
   "publishConfig": {
-    "registry": "https://your-nexus-host/repository/frontend/",
+    "registry": "https://registry.npmjs.org",
     "access": "public"
   },
   "devDependencies": {
