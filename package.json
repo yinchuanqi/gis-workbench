@@ -1,7 +1,8 @@
 {
-  "name": "@yinchuanqi/gis-workbench",
+  "name": "@focus-daima/gis-workbench",
   "version": "0.9.9",
   "type": "module",
+  "main": "./index.js",
   "description": "MapLibre GIS workbench with PostGIS registration, semantic vector styling, GPKG import, COG rasters, and resumable uploads.",
   "exports": {
     ".": "./index.js",
@@ -42,5 +43,9 @@
   "publishConfig": {
     "registry": "https://your-nexus-host/repository/frontend/",
     "access": "public"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "maplibre-gl": "^5.24.1"
   }
 }

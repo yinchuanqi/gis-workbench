@@ -1,6 +1,6 @@
 # GIS workbench
 
-A persistent DSH Web plugin (bundle `@yinchuanqi/gis-workbench`) that adds:
+A persistent DSH Web plugin (bundle `@focus-daima/gis-workbench`) that adds:
 
 - a MapLibre GL JS workbench panel with an **empty initial layer list**;
 - a collapsible right-side conversation panel;
@@ -15,8 +15,8 @@ The package is published to the internal Nexus npm hosted repository
 Configure the scope once for the target user:
 
 ```bash
-npm config set @yinchuanqi:registry https://your-nexus-host/repository/frontend/
-dsh plugin --profile web add @yinchuanqi/gis-workbench@0.9.8
+npm config set @focus-daima:registry https://your-nexus-host/repository/frontend/
+dsh plugin --profile web add @focus-daima/gis-workbench@0.9.9
 dsh web
 ```
 
@@ -24,7 +24,7 @@ A local tarball also works:
 
 ```bash
 npm pack
-dsh plugin --profile web add ./yinchuanqi-gis-workbench-0.9.8.tgz
+dsh plugin --profile web add ./focus-daima-gis-workbench-0.9.9.tgz
 ```
 
 Required runtime: Node.js with `node:sqlite`, GDAL CLI (`ogr2ogr`,

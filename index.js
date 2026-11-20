@@ -16,6 +16,7 @@ import {
 import { GisStore } from './server/store.js';
 import { createApiHandler } from './server/api.js';
 
+export const name = '@focus-daima/gis-workbench';
 export const inject = ['tools'];
 
 const PARAMETERS = {
@@ -384,8 +385,8 @@ export function apply(ctx) {
     },
   }), 'gis-workbench: set view tool');
 
-  ctx.inject(['webServer', 'workingDirectory'], (scope) => {
-    const workspace = scope.workingDirectory.defaultDirectory;
+  ctx.inject(['webServer'], (scope) => {
+    const workspace = process.cwd();
     const store = new GisStore(workspace);
     const ready = store.init().catch((error) => {
       console.error('[gis-workbench] database initialization failed', error);

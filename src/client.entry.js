@@ -1,7 +1,7 @@
 import { createPlugin } from './plugin.js';
 
 window.__ModuleLoader__.load({
-  id: '@yinchuanqi/gis-workbench',
+  id: '@focus-daima/gis-workbench',
   factory(require) {
     const React = require('react');
     return createPlugin(React);
