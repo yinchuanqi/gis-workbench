@@ -1,11 +1,30 @@
 # GIS workbench
 
-A persistent DSH Web plugin (bundle `@focus-daima/gis-workbench`) that adds:
+A **DeepSeek Harness (DSH) workbench plugin** (`@focus-daima/gis-workbench`) that
+embeds a MapLibre GL JS GIS console directly into the Harness web app. It lets the
+Harness conversation inspect, style, import, and persist spatial datasets and map
+layers on a shared map canvas.
+
+After the plugin is installed, open any Harness session and click the **GIS**
+button in the **top-right corner** to enter the GIS workbench. Choose **Original
+layout** in the workbench top bar to go back to the Harness session.
+
+The plugin adds:
 
 - a MapLibre GL JS workbench panel with an **empty initial layer list**;
 - a collapsible right-side conversation panel;
 - a Host tool `gis_add_layer` that the conversation calls to add raster layers;
 - a Client tool view that applies each successful add-layer result to the map store.
+
+## Screenshots
+
+**Entry point — the GIS button in the Harness session header (top-right corner):**
+
+![DeepSeek Harness session with the GIS entry button in the top-right corner](docs/screenshots/harness-entry.png)
+
+**GIS workbench — map canvas, layer panel, and map conversation:**
+
+![GIS workbench showing the map view, layer panel, and right-side map chat](docs/screenshots/gis-workbench.png)
 
 ## Installation in another DSH profile
 
@@ -16,7 +35,7 @@ Configure the scope once for the target user:
 
 ```bash
 npm config set @focus-daima:registry https://your-nexus-host/repository/frontend/
-dsh plugin --profile web add @focus-daima/gis-workbench@0.9.9
+dsh plugin --profile web add @focus-daima/gis-workbench@0.9.10
 dsh web
 ```
 
@@ -24,7 +43,7 @@ A local tarball also works:
 
 ```bash
 npm pack
-dsh plugin --profile web add ./focus-daima-gis-workbench-0.9.9.tgz
+dsh plugin --profile web add ./focus-daima-gis-workbench-0.9.10.tgz
 ```
 
 Required runtime: Node.js with `node:sqlite`, GDAL CLI (`ogr2ogr`,
