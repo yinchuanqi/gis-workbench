@@ -1,6 +1,6 @@
 {
   "name": "@focus-daima/gis-workbench",
-  "version": "0.9.9",
+  "version": "0.9.10",
   "type": "module",
   "main": "./index.js",
   "description": "MapLibre GIS workbench with PostGIS registration, semantic vector styling, GPKG import, COG rasters, and resumable uploads.",
