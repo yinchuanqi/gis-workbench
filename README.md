@@ -57,7 +57,7 @@ Install from the public npm registry:
 从公共 npm 源安装：
 
 ```bash
-dsh plugin --profile web add @focus-daima/gis-workbench@0.9.10
+dsh plugin --profile web add @focus-daima/gis-workbench@0.9.11
 dsh web
 ```
 
@@ -67,7 +67,7 @@ To use an internal Nexus mirror instead, configure the scope once:
 
 ```bash
 npm config set @focus-daima:registry https://your-nexus-host/repository/frontend/
-dsh plugin --profile web add @focus-daima/gis-workbench@0.9.10
+dsh plugin --profile web add @focus-daima/gis-workbench@0.9.11
 dsh web
 ```
 
@@ -77,7 +77,7 @@ A local tarball also works:
 
 ```bash
 npm pack
-dsh plugin --profile web add ./focus-daima-gis-workbench-0.9.10.tgz
+dsh plugin --profile web add ./focus-daima-gis-workbench-0.9.11.tgz
 ```
 
 ### 兼容版本 / Compatibility

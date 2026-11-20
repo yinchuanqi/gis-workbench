@@ -1,9 +1,13 @@
 {
   "name": "@focus-daima/gis-workbench",
-  "version": "0.9.10",
+  "version": "0.9.11",
   "type": "module",
   "main": "./index.js",
   "description": "MapLibre GIS workbench with PostGIS registration, semantic vector styling, GPKG import, COG rasters, and resumable uploads.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yinchuanqi/gis-workbench.git"
+  },
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
@@ -15,6 +19,7 @@
     "shared.js",
     "client.js",
     "cordis.patch.yml",
+    "LICENSE",
     "locale/*.json",
     "icon.svg",
     "src",
